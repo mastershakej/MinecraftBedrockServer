@@ -336,7 +336,7 @@ Check_Dependencies
 # Get directory path (default ~)
 until [ -d "$DirName" ]; do
   echo "Enter root installation path for Minecraft BE (this is the same for ALL servers and should be ~, the subfolder will be chosen from the server name you provide). Almost nobody should change this unless you're installing to a different disk altogether. (default ~): "
-  read_with_prompt DirName "Directory Path" "//var//lib"
+  read_with_prompt DirName "Directory Path" /var/lib
   DirName=$(eval echo "$DirName")
   if [ ! -d "$DirName" ]; then
     echo "Invalid directory.  Please use the default path of ~ or you're going to have errors.  This should be the same for ALL servers as it is your ROOT install directory."
